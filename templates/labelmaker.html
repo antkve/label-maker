@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	</head>
+	<body>
+		<div id="main" style="margin-right:20px;"> 
+			<canvas id="space" data_img_id="{{ img_id }}" >
+		</div>
+		<div id="controlpanel">
+			<p id="infotext" style="padding-right:20px;margin-left:20px;">
+				Click "browse" to upload an image file. Click the image on the left to place a landmark. Hold down the mouse button to zoom.
+				<br />
+			</p>
+			<input type="file" onchange="image_upload()">
+			<br /><br />Category:
+			<select name="category" id="category">
+				<option value="-- Select Category --">-- Select Category --</option>
+			</select><br />
+			<br />
+			User ID:
+			<br />
+			<input id="username"></input>
+			<br />
+			User has uploaded and labeled {{ user_number }}/20 images.
+			<br />
+			<br />
+			<button onclick="delete_image()">Delete</button>
+			<button onclick="submit_landmarks()">Submit landmarks</button>
+			<br />
+			<canvas id="diagram">
+		</div>
+		<script src="{{ url_for('static', filename='labelmaker.js') }}"></script>
+		<script src="{{ url_for('static', filename='jquery-3.3.1.min.js') }}"></script>
+	</body>
+</html>
