@@ -4,4 +4,4 @@ Running store.py starts a local flask server which you can connect to with any l
 
 ![alt text](https://github.com/antkve/label-maker/blob/master/screenshot.jpg)
 
-The server may also be port-forwarded to allow public access, e.g. to allow remote employees to upload and label training data for you.
+The server may also be hosted publicly, e.g. to allow remote employees to upload and label training data for you.
